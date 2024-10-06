@@ -127,6 +127,7 @@ nav a:active {
     text-align: center;
     text-shadow: 2px 2px var(--shadow);
     margin: 0;
+    line-height: 26px;
 }
 
 .introText h1 {

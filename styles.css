@@ -46,6 +46,7 @@ nav {
     animation-fill-mode: none;
     animation-timing-function: ease-out;
 
+    width:max-content;
     top: 6px;
     transition: top 0.3s;
     position: fixed;
@@ -200,12 +201,14 @@ footer p {
 }
 
 /*MOBILE*/
+@media only screen and (max-width: 576px) {
+   nav a {
+        display:block;
+    }
+}
 @media only screen and (max-width: 500px) {
     .content {
         width: 96%;
-    }
-    nav a {
-        display:block;
     }
     .verticalLine {
         width:3px;

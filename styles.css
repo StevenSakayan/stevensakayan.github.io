@@ -32,7 +32,6 @@ html, body {
 
 .navBar {
     height:auto;
-    margin: 6px auto 6px auto;
 }
 
 nav {
@@ -44,21 +43,21 @@ nav {
     
     animation-name: navbarIntro;
     animation-duration: 1s;
-    animation-fill-mode: both;
+    animation-fill-mode: none;
     animation-timing-function: ease-out;
 
+    top: 6px;
+    transition: top 0.3s;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    padding:0 6px;
-    margin: 0;
     text-align: center;
     z-index: 9999;
 }
 
 nav a {
     display: inline-block;
-    margin: 0 10px;
+    margin: 6px 10px;
     text-shadow: 2px 2px var(--shadow);
     text-decoration: none;
 }
@@ -116,7 +115,9 @@ nav a:active {
 }
 
 .introPicture img {
-    height: 250px;
+    max-width: 250px;
+    width: 100%;
+    height:auto;
     border-radius: 100%;
     border: 6px solid white;
 }
@@ -163,6 +164,7 @@ nav a:active {
     font-size: 2em;
     text-shadow: 2px 2px var(--shadow);
     list-style:square;
+    padding:6px;
 }
 
 ul li ul {
@@ -174,14 +176,13 @@ ul li ul {
     margin:0;
     font-size: 3em;
     text-shadow: 3px 3px var(--shadow);
+    padding:6px;
 }
 
 footer {
     color:white;
     font-size: 2em;
     text-shadow: 2px 2px var(--shadow);
-    
-    margin: 0;
 }
 
 footer p {
@@ -194,6 +195,38 @@ footer p {
     position: relative;
     transform: translateX(-50%);
     left: 50%;
-    margin:10px 0;
-    padding: 0 10px;
+    margin:0;
+    padding: 6px;
+}
+
+/*MOBILE*/
+@media only screen and (max-width: 500px) {
+    .content {
+        width: 96%;
+    }
+    nav a {
+        display:block;
+    }
+    .verticalLine {
+        width:3px;
+        height: 200px;
+        background-color: white;
+        box-shadow: 3px 3px var(--shadow);
+        flex-shrink: 0;
+        flex-grow: 0;
+        margin: 0 25px;
+    }
+    
+    .introText h1 {
+        font-size: 4em;
+        line-height: 75px;
+        text-shadow: 4px 4px var(--shadow);
+    }
+
+    .introText h2 {
+        font-size: 2em;
+        line-height: 25px;
+        text-shadow: 2px 2px var(--shadow);
+    }
+    
 }

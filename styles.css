@@ -1,0 +1,148 @@
+:root {
+    --minty:#a1ffc5;
+    --shadow:rgba(44, 45, 74, 0.69);
+}
+@font-face {
+    font-family: DS;
+    src: url('font/ds.ttf');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+* {
+    font-family: DS;
+    font-weight: 100;
+}
+
+.content {
+    margin: auto;
+    width: 75%;
+}
+
+
+@keyframes navbarIntro {
+    0% {top:-50px; opacity: 0;}
+    100% {top:6px; opacity: 1;}
+}
+
+.navBar {
+    height:auto;
+    margin: 6px auto 6px auto;
+}
+
+nav {
+    background-color: var(--minty);
+    border-radius: 5px;
+    font-size: 2em;
+    color: white;
+    box-shadow: 5px 5px var(--shadow);
+    
+    animation-name: navbarIntro;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    padding:0 6px;
+    margin: 0 auto 0 auto;
+    width:fit-content;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 10px;
+    text-shadow: 2px 2px var(--shadow);
+}
+
+
+@keyframes intro {
+    0% {top:0; opacity: 0;}
+    100% {top:40vh; opacity: 1;}
+}
+
+.intro {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    height: 100vh; /* Full viewport height */
+}
+
+.introContent {
+    animation-name: intro;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    
+    display: flex;
+    height: auto; /* Let it expand based on content */
+    align-items: center; /* Vertically center the children inside */
+    position: absolute;
+    top:36%;
+    background-color: var(--minty);
+    border-radius: 8px;
+    padding:17px;
+    box-shadow: 5px 5px var(--shadow);
+}
+
+.introText {
+    text-align: right;
+    height: auto;
+    padding-right: 37px;
+    border-right: 4px solid;
+    color: white;
+}
+
+.introPicture {
+    flex: 50%; /* Adjust width if needed */
+}
+
+.introPicture img {
+    height: 250px;
+    margin-left: 34px;
+    border-radius: 100%;
+    border: 6px solid white;
+}
+
+.introText h1 {
+    font-size: 5em;
+    margin: 0;
+    line-height: 78px;
+    text-shadow: 5px 5px var(--shadow);
+    
+}
+
+.introText h2 {
+    font-size: 3em;
+    margin: 0;
+    line-height: 43px;
+    text-shadow: 3px 3px var(--shadow);
+}
+
+.box {
+    background-color: var(--minty);
+    border-radius: 8px;
+    color: white;
+    
+    box-shadow: 5px 5px var(--shadow);
+    padding:0 8px;
+    margin-bottom: 150px;
+}
+
+.box p, .box li {
+    margin:0;
+    font-size: 2em;
+    text-shadow: 2px 2px var(--shadow);
+    list-style:square;
+}
+
+.box h2 {
+    margin:0;
+    font-size: 3em;
+    text-shadow: 3px 3px var(--shadow);
+}

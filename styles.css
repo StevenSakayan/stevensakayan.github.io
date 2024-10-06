@@ -11,6 +11,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -60,12 +61,21 @@ nav a {
     display: inline-block;
     margin: 0 10px;
     text-shadow: 2px 2px var(--shadow);
+    text-decoration: none;
+}
+
+nav a:link, a:visited, nav a:hover {
+    color: white;
+}
+
+nav a:active {
+    color:#9d9d9d;
 }
 
 
 @keyframes intro {
     0% {top:0; opacity: 0;}
-    100% {top:40vh; opacity: 1;}
+    100% {top:37vh; opacity: 1;}
 }
 
 .intro {
@@ -84,7 +94,6 @@ nav a {
     height: auto; /* Let it expand based on content */
     align-items: center; /* Vertically center the children inside */
     position: absolute;
-    top:36%;
     background-color: var(--minty);
     border-radius: 8px;
     padding:17px;
@@ -135,6 +144,10 @@ nav a {
     margin-bottom: 150px;
 }
 
+.box ul {
+    margin: 0;
+}
+
 .box p, .box li {
     margin:0;
     font-size: 2em;
@@ -142,8 +155,28 @@ nav a {
     list-style:square;
 }
 
+ul li ul {
+    font-size: 0.5em;
+}
+
 .box h2 {
+    text-align: center;
     margin:0;
     font-size: 3em;
     text-shadow: 3px 3px var(--shadow);
+}
+
+footer {
+    color:white;
+    font-size: 1.5em;
+    text-shadow: 1.5px 1.5px var(--shadow);
+    
+    margin: 0;
+}
+
+footer p {
+    background-color: var(--minty);
+    width:fit-content;
+    margin:0;
+    text-align: center;
 }

@@ -9,7 +9,7 @@
 </script>
 
 <template>
-	<div class="h-screen flex items-center justify-center">
+	<div class="hero flex items-center justify-center">
 		<Window class="" title="Hello World.cmd">
 			<div class="flex items-center h-auto gap-2 p-10 max-md:flex-col">
 				<div class="">
@@ -25,7 +25,7 @@
             </div>
 					</div>
 					<h2 class="text-3xl font-bold">Steven Sakayan</h2>
-					<h2 class="text-2xl">Software Developer</h2>
+					<h2 class="text-2xl">Software & Fullstack Engineer</h2>
           <div class="divider divider-vertical"></div>
           <div class="flex justify-center gap-2 pb-3">
             <HeroLinkIcon href="https://github.com/StevenSakayan"><GithubIcon/></HeroLinkIcon>
@@ -44,3 +44,9 @@
 		</Window>
 	  </div>
 </template>
+
+<style lang="css">
+  .hero {
+    height: 92vh;
+  }
+</style>
